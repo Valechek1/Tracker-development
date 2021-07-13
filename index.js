@@ -26,6 +26,18 @@ function createElement() {
   newInputAdd.focus()
   newLabelAdd.append(newImgAdd)
 
+  newInputAdd.addEventListener('blur', (event) => {
+    if (event.target.value === '') {
+      newLabelAdd.remove()
+    }
+  })
+
+  newInputAdd.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      createElement()
+    }
+  })
+
   newImgAdd.addEventListener('mouseover', (event) => {
     event.target.src = "img/GroupBlue.svg";
   });
