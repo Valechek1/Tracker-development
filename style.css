@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  width: 1152px;
+  height: 700px;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Roboto', sans-serif, Arial, Helvetica, sans-serif;
+}
+
+.box-todu {
+  display: flex;
+  width: 336px;
+  height: 100%;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.conteiner-description {
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.header-color {
+  height: 24px;
+  background-color: #FFDC40;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+
+.header-text {
+  margin-top: 10px;
+}
+
+.conteiner-arrou {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-right: 29px;
+}
+
+.img-arrou {
+  width: 25px;
+  height: 15px;
+  padding-right: 29px;
+}
+
+.about {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #000000;
+  margin: 0;
+}
+
+.conteiner-list {
+  margin-top: 26px;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #C4C4C4;
+  margin-right: 21px;
+  margin-left: 27px;
+  height: max-content;
+}
+
+.img-input-img {
+  padding-left: 56px;
+  padding-top: 5px;
+}
+
+.input-wrapper {
+  box-sizing: border-box;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  margin: 0 auto;
+  background: #833AE0;
+  border-radius: 71px;
+  margin-top: 18px;
+  margin-bottom: 19px;
+}
+
+.cirkle {
+  background: #9953F1;
+  border-radius: 71px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+}
+
+.cirkle-cross {
+  width: 13px;
+  height: 15px;
+  position: relative;
+  left: 15px;
+  top: 13px;
+}
+
+.btn {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: white;
+  margin-left: 4px;
+  font-family: 'Roboto', sans-serif;
+  background: #833AE0;
+  outline: none;
+  border: none;
+}
+
