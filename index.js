@@ -27,7 +27,7 @@ function createElement() {
   newLabelAdd.append(newImgAdd);
 
   newInputAdd.addEventListener('blur', (event) => {
-    if (event.target.value === '') {
+    if (event.target.value === '' && event.target.parentElement.nextElementSibling) {
       newLabelAdd.remove();
     }
   })
@@ -115,4 +115,3 @@ button.addEventListener('click', () => {
 })
 
 createElement();
-
