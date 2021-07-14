@@ -4,7 +4,6 @@ const input = document.querySelector('#inputOne');
 let sortDirection = -1;
 
 function createElement() {
-
   const newDivAdd = document.querySelector('.conteiner-list');
 
   if (newDivAdd.lastElementChild && newDivAdd.lastElementChild.firstElementChild.value === '') {
@@ -47,7 +46,11 @@ function createElement() {
   });
 
   newImgAdd.addEventListener('click', (event) => {
-    event.target.parentElement.remove();
+    if (newLabelAdd.parentElement.childElementCount > 1) {
+      event.target.parentElement.remove();
+    } else {
+      return
+    }
   })
 }
 
