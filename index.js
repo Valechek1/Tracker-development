@@ -1,7 +1,7 @@
 const button = document.querySelector('.button');
 
 const input = document.querySelector('#inputOne');
-let multiplay = -1
+let sortDirection = -1
 
 function createElement() {
 
@@ -54,25 +54,25 @@ function createElement() {
 const imgSort = document.querySelector('#img-arrou')
 
 imgSort.addEventListener('mouseover', (event) => {
-  if (multiplay === -1) {
+  if (sortDirection === -1) {
     event.target.src = "img/Group1Active.svg"
-  } else if (multiplay === 1) {
+  } else if (sortDirection === 1) {
     event.target.src = "img/Group2Active.svg"
   }
 })
 
 imgSort.addEventListener('mouseout', (event) => {
-  if (multiplay === -1) {
+  if (sortDirection === -1) {
     event.target.src = "img/Group1.svg"
-  } else if (multiplay === 1) {
+  } else if (sortDirection === 1) {
     event.target.src = "img/Group2.svg"
   }
 })
 
 function render(arr, needNewLine) {
   const divClear = document.querySelector('.conteiner-list');
-  divClear.innerHTML = '';
   arr.forEach((element) => {
+    element.remove()
     divClear.append(element);
   });
   if (needNewLine) {
@@ -81,9 +81,9 @@ function render(arr, needNewLine) {
 }
 
 imgSort.addEventListener('click', (event) => {
-  if (multiplay === -1) {
+  if (sortDirection === -1) {
     event.target.src = "img/Group2Active.svg"
-  } else if (multiplay === 1) {
+  } else if (sortDirection === 1) {
     event.target.src = "img/Group1Active.svg"
   }
 
@@ -102,12 +102,12 @@ imgSort.addEventListener('click', (event) => {
   arraySortElement.sort((lb1, lb2) => {
     const nameFromLb1 = lb1.firstElementChild.value
     const nameFromLb2 = lb2.firstElementChild.value
-    const localCompareResult = nameFromLb1.localeCompare(nameFromLb2) * multiplay * -1;
+    const localCompareResult = nameFromLb1.localeCompare(nameFromLb2) * sortDirection * -1;
     return localCompareResult;
   })
 
   render(arraySortElement, needEmptyLine)
-  multiplay *= -1
+  sortDirection *= -1
 })
 
 button.addEventListener('click', () => {
